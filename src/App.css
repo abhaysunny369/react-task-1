@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+background: #0b0b0f;
+color: white;
+font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+width: 100%;
+padding: 20px 6%;
+background: #15151d;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+border-bottom: 1px solid #292936;
+}
+
+.logo {
+color: #ff4545;
+font-size: 25px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.nav-text {
+color: #c7c7d1;
+font-size: 14px;
+}
+
+/* Home Page */
+
+.home-container {
+min-height: 100vh;
+}
+
+.hero {
+padding: 65px 20px;
+text-align: center;
+background: linear-gradient(135deg, #24243e, #14141c, #441919);
+}
+
+.hero h1 {
+font-size: 38px;
+margin-bottom: 15px;
+}
+
+.hero p {
+color: #ccccd6;
+margin-bottom: 30px;
+}
+
+/* Search */
+
+.search-form {
+display: flex;
+max-width: 600px;
+margin: auto;
+gap: 10px;
+}
+
+.search-form input {
+flex: 1;
+min-width: 0;
+padding: 14px;
+border-radius: 6px;
+border: 1px solid #454552;
+background: #20202a;
+color: white;
+outline: none;
+}
+
+.search-form input:focus {
+border-color: #ff4545;
+}
+
+.search-form button {
+padding: 14px 25px;
+background: #ff4545;
+border: none;
+border-radius: 6px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+}
+
+.search-form button:hover {
+background: #e52e2e;
+}
+
+.search-form button:disabled {
+opacity: 0.7;
+cursor: wait;
+}
+
+/* Search Results */
+
+.results-section {
+padding: 35px 6%;
+}
+
+.section-title {
+margin-bottom: 25px;
+font-size: 27px;
+}
+
+.movie-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 25px;
+}
+
+/* Movie Card */
+
+.movie-link {
+color: white;
+text-decoration: none;
+}
+
+.movie-card {
+background: #191922;
+border-radius: 10px;
+overflow: hidden;
+height: 100%;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 8px 25px rgba(255, 69, 69, 0.2);
+}
+
+.movie-poster {
+display: block;
+width: 100%;
+height: 330px;
+object-fit: cover;
+background: #24242c;
+}
+
+.movie-info {
+padding: 15px;
+}
+
+.movie-info h3 {
+font-size: 17px;
+margin-bottom: 12px;
+}
+
+.movie-info p {
+color: #ccccd6;
+font-size: 14px;
+margin-bottom: 8px;
+}
+
+.click-text {
+color: #ff6464 !important;
+margin-top: 15px;
+}
+
+/* Messages */
+
+.message {
+text-align: center;
+padding: 35px 15px;
+font-size: 22px;
+}
+
+.error {
+color: #ff6969;
+}
+
+/* Movie Details */
+
+.details-container {
+padding: 35px 6%;
+min-height: 100vh;
+}
+
+.back-button {
+display: inline-block;
+background: #ff4545;
+color: white;
+text-decoration: none;
+padding: 12px 18px;
+border-radius: 6px;
+margin-bottom: 25px;
+}
+
+.back-button:hover {
+background: #e52e2e;
+}
+
+.details-card {
+display: flex;
+align-items: flex-start;
+gap: 35px;
+padding: 30px;
+background: #191922;
+border-radius: 12px;
+}
+
+.details-poster {
+width: 300px;
+max-width: 40%;
+border-radius: 8px;
+object-fit: cover;
+}
+
+.details-info {
+flex: 1;
+min-width: 0;
+}
+
+.details-info h1 {
+font-size: 32px;
+margin-bottom: 20px;
+}
+
+.details-info p {
+color: #ddddE5;
+line-height: 1.7;
+margin-bottom: 12px;
+overflow-wrap: anywhere;
+}
+
+.details-info strong {
+color: white;
+}
+
+.details-info h3 {
+margin: 25px 0 12px;
+color: #ff6464;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+.movie-grid {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 700px) {
+.navbar {
+flex-direction: column;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 29px;
+}
+
+.movie-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 15px;
+}
+
+.movie-poster {
+height: 260px;
+}
+
+.details-card {
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+
+.details-poster {
+width: 250px;
+max-width: 100%;
+}
+
+.details-info {
+width: 100%;
+}
+
+.details-info h1 {
+font-size: 27px;
+}
+}
+
+@media (max-width: 400px) {
+.search-form {
+flex-direction: column;
+}
+
+.search-form button {
+width: 100%;
+}
+
+.movie-grid {
+grid-template-columns: 1fr;
+}
+
+.movie-poster {
+height: 400px;
+}
+}
